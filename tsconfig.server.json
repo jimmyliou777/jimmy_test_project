@@ -1,0 +1,12 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"module": "commonjs",
+		"jsx": "react",
+		"noEmit": false,
+		"sourceMap": false
+	},
+	"include": [
+		"src/server.ts"
+	]
+}
