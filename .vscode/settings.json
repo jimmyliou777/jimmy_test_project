@@ -5,15 +5,12 @@
     },
     "files.autoSave": "off",
     // Set the default
-    "editor.formatOnSave": false,
-    // Enable per-language
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
-    // Enable prettier for typescript react
+    "editor.formatOnSave": true,
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
     },
     "workbench.editor.showTabs": true
 }
