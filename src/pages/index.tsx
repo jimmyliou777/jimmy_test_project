@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect } from 'react';
+import Layout from '~/components/Layout';
 
 interface Props {
     a: number;
@@ -12,17 +13,19 @@ export default function Home(params: Props): JSX.Element {
         console.log(`123-${a}`);
     }, [a]);
     return (
-        <ul>
-            <li>
-                <Link href="/a">
-                    <a>a</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="/b">
-                    <a>b</a>
-                </Link>
-            </li>
-        </ul>
+        <Layout>
+            <ul>
+                <li>
+                    <Link href="/a">
+                        <a>a</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/b">
+                        <a>b</a>
+                    </Link>
+                </li>
+            </ul>
+        </Layout>
     );
 }
