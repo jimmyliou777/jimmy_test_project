@@ -6,7 +6,6 @@ interface Props {
 const Block = ({ idx }: Props): any => {
     const [state, dispatch] = useContext(ReducerContext);
     const { blocks } = state;
-    console.log(typeof dispatch);
 
     const setNum = (number: string, index: number) => () => {
         if (blocks[index][number] === 1) {
