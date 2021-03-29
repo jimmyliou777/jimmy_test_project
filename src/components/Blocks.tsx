@@ -5,10 +5,9 @@ interface Props {
 }
 const Block = ({ idx }: Props): any => {
     const [state, dispatch] = useContext(ReducerContext);
-    const { blocks } = state;
 
-    const setNum = (number: string, index: number) => () => {
-        if (blocks[index][number] === 1) {
+    const setNum = (number: number, index: number) => () => {
+        if (state[number] === index) {
             dispatch({ type: 'REMOVE_NUM', payload: { number, index } });
         } else {
             dispatch({ type: 'SET_NUM', payload: { number, index } });
@@ -21,13 +20,13 @@ const Block = ({ idx }: Props): any => {
     return (
         <div className="block">
             <h1>{idx}</h1>
-            {Object.keys(blocks[idx]).map((number) => {
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => {
                 return (
                     <button
                         key={`block_${idx}_${number}`}
-                        className={`${blocks[idx][number] === 1 ? 'active' : ''}`}
+                        className={`${state[number] === idx ? 'active' : ''}`}
                         onClick={setNum(number, idx)}
-                        disabled={blocks[idx][number] === 2}
+                        disabled={state[number] > 0 && state[number] !== idx}
                     >
                         {number}
                     </button>
