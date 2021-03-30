@@ -4,7 +4,6 @@ interface Props {
 }
 
 const Layout = (props: Props): JSX.Element => {
-    console.log('init_layout');
     useEffect(() => {
         console.log('layout');
     }, []);

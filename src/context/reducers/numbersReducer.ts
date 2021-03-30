@@ -19,14 +19,12 @@ const setNumReducer = (state: any = initState, action: any = {}): any => {
             newState[action.payload.number] = action.payload.index;
 
             return {
-                ...state,
                 ...newState,
             };
         case "REMOVE_NUM":
             newState[action.payload.number] = 0;
 
             return {
-                ...state,
                 ...newState,
             };
         case "CLEAR_NUM":
@@ -37,7 +35,6 @@ const setNumReducer = (state: any = initState, action: any = {}): any => {
             });
 
             return {
-                ...state,
                 ...newState,
             };
         default:
