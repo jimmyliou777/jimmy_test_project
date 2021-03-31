@@ -1,4 +1,4 @@
-const initState = {
+export const initState = {
     1: 0,
     2: 0,
     3: 0,
@@ -12,7 +12,7 @@ const initState = {
 };
 
 // 保留 Redux 的做法，直接將 initState 給 Reducer
-const setNumReducer = (state: any = initState, action: any = {}): any => {
+const setNumReducer = (state: any = initState, action: { type: string, payload: any }): any => {
     switch (action.type) {
         case "SET_NUM":
             return {

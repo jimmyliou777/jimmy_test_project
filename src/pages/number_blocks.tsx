@@ -1,8 +1,7 @@
 import React, { useReducer } from 'react';
 import { ReducerContext } from '~/context/numbersContext';
-import { setNumReducer } from '~/context/reducers/numbersReducer';
+import { setNumReducer, initState } from '~/context/reducers/numbersReducer';
 import Block from '~/components/Blocks';
-const initState = setNumReducer();
 // import '~/styles/styles.css';
 export default function App(): JSX.Element {
     // 使用 useReducer 將創建後的 state 及 dispatch 放進 reducer
