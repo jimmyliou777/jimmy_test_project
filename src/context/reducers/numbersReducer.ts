@@ -13,22 +13,19 @@ const initState = {
 
 // 保留 Redux 的做法，直接將 initState 給 Reducer
 const setNumReducer = (state: any = initState, action: any = {}): any => {
-    const newState = { ...state };
     switch (action.type) {
         case "SET_NUM":
-            newState[action.payload.number] = action.payload.index;
-
             return {
-                ...newState,
+                ...state,
+                [action.payload.number]: action.payload.index,
             };
         case "REMOVE_NUM":
-            newState[action.payload.number] = 0;
-
             return {
-                ...newState,
+                ...state,
+                [action.payload.number]: 0,
             };
         case "CLEAR_NUM":
-
+            const newState = { ...state };
             // others set unselect
             Object.keys(newState).forEach((index) => {
                 newState[index] === Number(action.payload.index) && (newState[index] = 0);
