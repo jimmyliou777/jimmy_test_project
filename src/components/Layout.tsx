@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-interface Props {
+type Props = {
     children: JSX.Element;
-}
+};
 
 const Layout = (props: Props): JSX.Element => {
     useEffect(() => {

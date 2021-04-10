@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { ReducerContext } from '~/context/numbersContext';
-interface Props {
+type Props = {
     idx: number;
-}
+};
 const Block = ({ idx }: Props): any => {
     const [state, dispatch] = useContext(ReducerContext);
 
