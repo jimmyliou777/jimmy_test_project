@@ -19,8 +19,8 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         // 優先使用 interface 而不是 type
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
+        'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
+        'react-hooks/exhaustive-deps': 'warn', // 检查 effect 的依赖
         'default-case': ['warn', { commentPattern: '^no default$' }],
     },
 };
