@@ -6,7 +6,10 @@ type Props = {
 
 const Button = (props: Props): JSX.Element => {
     const { children } = props;
-    return <button>{children}</button>;
+    const handleClick = () => {
+        console.log('handleClick-->>>');
+    };
+    return <button onClick={handleClick}>{children}</button>;
 };
 
 export default Button;
