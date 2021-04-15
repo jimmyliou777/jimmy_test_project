@@ -2,10 +2,10 @@ import Link from 'next/link';
 import React, { useEffect } from 'react';
 import Layout from '~/components/Layout';
 
-interface Props {
+type Props = {
     a: number;
     b: string;
-}
+};
 
 export default function Home(params: Props): JSX.Element {
     const a: number | string = params.a || '123';
