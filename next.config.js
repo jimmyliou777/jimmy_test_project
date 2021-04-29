@@ -31,6 +31,6 @@ const mdxConfig = {
 };
 
 module.exports = withPlugins([
-    [withMDX, mdxConfig],
     [withSass, sassConfig],
+    [withMDX, mdxConfig],
 ]);

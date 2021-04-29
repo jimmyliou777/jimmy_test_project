@@ -5,7 +5,8 @@
         "dev": "rm -rf ./dist;tsc --project tsconfig.server.json; node dist/server.js",
         "build": "next build",
         "start": "cross-env NODE_ENV=production node server.js",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "export": "next build && next export"
     },
     "dependencies": {
         "@koa/router": "^10.0.0",
