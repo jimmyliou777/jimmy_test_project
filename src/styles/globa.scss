@@ -1,3 +1,11 @@
+@import './variables.scss';
+body {
+    margin: 0;
+    min-width: 640px;
+    color: $color;
+    font-size: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
 :global {
     .global-container {
         margin: 0 auto;
